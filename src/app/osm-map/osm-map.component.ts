@@ -24,6 +24,7 @@ export class OsmMapComponent implements OnInit, OnDestroy {
     transparent: true,
   });
 
+  
   layer_lixo_coletado: TileLayer = tileLayer.wms("https://catalogo.ipe.df.gov.br/geoserver/wms", {
     layers: 'geonode:lixo_coletado_2018',
     format: 'image/png',
