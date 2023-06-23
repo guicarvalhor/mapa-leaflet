@@ -1,11 +1,15 @@
-<div class="map-container" leaflet 
-     [leafletOptions]="options" 
+<div class="map-container" leaflet leafletDraw
      (leafletMapReady)="onMapReady($event)" 
-     (leafletMapZoomEnd)="onMapZoomEnd($event)">
+     (leafletMapZoomEnd)="onMapZoomEnd($event)"
+     [leafletLayersControl]="layersControl"
+     [leafletOptions]="options"
+     [leafletDrawOptions]="drawOptions"
+     (leafletDrawCreated)="onDrawCreated($event)">
+     <div [leafletLayer]="drawnItems"></div>
 </div>
 
 <leaflet-fullscreen-control 
      [map]="map" 
      [options]="fullscreenOptions">
-     
 </leaflet-fullscreen-control>
+

@@ -8,6 +8,9 @@ import { OsmMapComponent } from './osm-map/osm-map.component';
 import { FormsModule } from '@angular/forms';
 import {NgxLeafletFullscreenModule} from '@runette/ngx-leaflet-fullscreen'
 
+import { LeafletDrawModule } from '@asymmetrik/ngx-leaflet-draw';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +22,7 @@ import {NgxLeafletFullscreenModule} from '@runette/ngx-leaflet-fullscreen'
     LeafletModule,
     FormsModule,
     NgxLeafletFullscreenModule,
+    LeafletDrawModule
   ],
   providers: [],
   bootstrap: [AppComponent]
